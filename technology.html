@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Technology & Innovation Blog" data-es="Blog de Tecnología e Innovación">Technology & Innovation Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="My Blog" data-es="Mi Blog">My Blog</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="index.html#about" class="nav-link" data-en="About" data-es="Acerca de">About</a>
+                <a href="index.html#topics" class="nav-link" data-en="Topics" data-es="Temas">Topics</a>
+                <a href="index.html#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="switchLanguage('en')" class="lang-option">
+                            <span class="flag">🇺🇸</span> English
+                        </button>
+                        <button onclick="switchLanguage('es')" class="lang-option">
+                            <span class="flag">🇪🇸</span> Español
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+                <span>/</span>
+                <span data-en="Technology & Innovation" data-es="Tecnología e Innovación">Technology & Innovation</span>
+            </div>
+            <h1 data-en="Technology & Innovation" data-es="Tecnología e Innovación">Technology & Innovation</h1>
+            <p data-en="Exploring the latest in tech, AI, programming, and digital innovation that's shaping our future" data-es="Explorando lo último en tecnología, IA, programación e innovación digital que está moldeando nuestro futuro">Exploring the latest in tech, AI, programming, and digital innovation that's shaping our future</p>
+            <div class="blog-stats">
+                <span><i class="fas fa-newspaper"></i> <span data-en="12 Articles" data-es="12 Artículos">12 Articles</span></span>
+                <span><i class="fas fa-eye"></i> <span data-en="2.5k Views" data-es="2.5k Vistas">2.5k Views</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Content -->
+                <main class="blog-main">
+                    <!-- Featured Article -->
+                    <article class="featured-post">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="AI Technology">
+                            <div class="post-badge" data-en="Featured" data-es="Destacado">Featured</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date" data-en="March 15, 2024" data-es="15 de Marzo, 2024">March 15, 2024</span>
+                                <span class="read-time" data-en="8 min read" data-es="8 min lectura">8 min read</span>
+                            </div>
+                            <h2 data-en="The Future of Artificial Intelligence: Beyond ChatGPT" data-es="El Futuro de la Inteligencia Artificial: Más Allá de ChatGPT">The Future of Artificial Intelligence: Beyond ChatGPT</h2>
+                            <p data-en="As we stand on the brink of an AI revolution, it's fascinating to explore what lies beyond current language models. From autonomous agents to artificial general intelligence, the next decade promises unprecedented technological advancement..." data-es="Mientras nos encontramos al borde de una revolución de IA, es fascinante explorar lo que hay más allá de los modelos de lenguaje actuales. Desde agentes autónomos hasta inteligencia artificial general, la próxima década promete avances tecnológicos sin precedentes...">As we stand on the brink of an AI revolution, it's fascinating to explore what lies beyond current language models. From autonomous agents to artificial general intelligence, the next decade promises unprecedented technological advancement...</p>
+                            <a href="#" class="read-more" data-en="Read Full Article" data-es="Leer Artículo Completo">Read Full Article</a>
+                        </div>
+                    </article>
+
+                    <!-- Regular Posts -->
+                    <div class="posts-grid">
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop" alt="Programming">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date" data-en="March 12, 2024" data-es="12 de Marzo, 2024">March 12, 2024</span>
+                                    <span class="read-time" data-en="5 min read" data-es="5 min lectura">5 min read</span>
+                                </div>
+                                <h3 data-en="The Rise of Low-Code Development Platforms" data-es="El Auge de las Plataformas de Desarrollo Low-Code">The Rise of Low-Code Development Platforms</h3>
+                                <p data-en="Low-code platforms are democratizing software development, enabling non-programmers to build applications..." data-es="Las plataformas low-code están democratizando el desarrollo de software, permitiendo a no programadores crear aplicaciones...">Low-code platforms are democratizing software development, enabling non-programmers to build applications...</p>
+                                <a href="#" class="read-more" data-en="Read More" data-es="Leer Más">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop" alt="Blockchain">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date" data-en="March 8, 2024" data-es="8 de Marzo, 2024">March 8, 2024</span>
+                                    <span class="read-time" data-en="6 min read" data-es="6 min lectura">6 min read</span>
+                                </div>
+                                <h3 data-en="Blockchain Beyond Cryptocurrency" data-es="Blockchain Más Allá de las Criptomonedas">Blockchain Beyond Cryptocurrency</h3>
+                                <p data-en="Exploring practical applications of blockchain technology in supply chain, healthcare, and digital identity..." data-es="Explorando aplicaciones prácticas de la tecnología blockchain en cadena de suministro, salud e identidad digital...">Exploring practical applications of blockchain technology in supply chain, healthcare, and digital identity...</p>
+                                <a href="#" class="read-more" data-en="Read More" data-es="Leer Más">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop" alt="Cloud Computing">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date" data-en="March 5, 2024" data-es="5 de Marzo, 2024">March 5, 2024</span>
+                                    <span class="read-time" data-en="4 min read" data-es="4 min lectura">4 min read</span>
+                                </div>
+                                <h3 data-en="Edge Computing: Bringing Processing Closer to Data" data-es="Edge Computing: Acercando el Procesamiento a los Datos">Edge Computing: Bringing Processing Closer to Data</h3>
+                                <p data-en="How edge computing is reducing latency and improving performance for IoT and real-time applications..." data-es="Cómo edge computing está reduciendo la latencia y mejorando el rendimiento para IoT y aplicaciones en tiempo real...">How edge computing is reducing latency and improving performance for IoT and real-time applications...</p>
+                                <a href="#" class="read-more" data-en="Read More" data-es="Leer Más">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop" alt="Cybersecurity">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date" data-en="March 1, 2024" data-es="1 de Marzo, 2024">March 1, 2024</span>
+                                    <span class="read-time" data-en="7 min read" data-es="7 min lectura">7 min read</span>
+                                </div>
+                                <h3 data-en="Zero Trust Security: The Future of Cybersecurity" data-es="Seguridad Zero Trust: El Futuro de la Ciberseguridad">Zero Trust Security: The Future of Cybersecurity</h3>
+                                <p data-en="Understanding the Zero Trust security model and why it's becoming essential in today's digital landscape..." data-es="Entendiendo el modelo de seguridad Zero Trust y por qué se está volviendo esencial en el panorama digital actual...">Understanding the Zero Trust security model and why it's becoming essential in today's digital landscape...</p>
+                                <a href="#" class="read-more" data-en="Read More" data-es="Leer Más">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn" data-en="Next" data-es="Siguiente">Next</button>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-widget">
+                        <h3 data-en="Search" data-es="Buscar">Search</h3>
+                        <div class="search-box">
+                            <input type="text" placeholder="" data-placeholder-en="Search articles..." data-placeholder-es="Buscar artículos...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h3 data-en="Categories" data-es="Categorías">Categories</h3>
+                        <ul class="categories">
+                            <li><a href="#" data-en="Artificial Intelligence" data-es="Inteligencia Artificial">Artificial Intelligence</a> <span>(4)</span></li>
+                            <li><a href="#" data-en="Programming" data-es="Programación">Programming</a> <span>(3)</span></li>
+                            <li><a href="#" data-en="Cloud Computing" data-es="Computación en la Nube">Cloud Computing</a> <span>(2)</span></li>
+                            <li><a href="#" data-en="Cybersecurity" data-es="Ciberseguridad">Cybersecurity</a> <span>(2)</span></li>
+                            <li><a href="#" data-en="Web Development" data-es="Desarrollo Web">Web Development</a> <span>(1)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="sidebar-widget">
+                        <h3 data-en="Popular Posts" data-es="Publicaciones Populares">Popular Posts</h3>
+                        <div class="popular-posts">
+                            <article class="popular-post">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=80&h=80&fit=crop" alt="AI">
+                                <div class="popular-post-content">
+                                    <h4 data-en="The Future of AI" data-es="El Futuro de la IA">The Future of AI</h4>
+                                    <span data-en="March 15, 2024" data-es="15 de Marzo, 2024">March 15, 2024</span>
+                                </div>
+                            </article>
+                            <article class="popular-post">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=80&h=80&fit=crop" alt="Programming">
+                                <div class="popular-post-content">
+                                    <h4 data-en="Low-Code Platforms" data-es="Plataformas Low-Code">Low-Code Platforms</h4>
+                                    <span data-en="March 12, 2024" data-es="12 de Marzo, 2024">March 12, 2024</span>
+                                </div>
+                            </article>
+                            <article class="popular-post">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=80&h=80&fit=crop" alt="Security">
+                                <div class="popular-post-content">
+                                    <h4 data-en="Zero Trust Security" data-es="Seguridad Zero Trust">Zero Trust Security</h4>
+                                    <span data-en="March 1, 2024" data-es="1 de Marzo, 2024">March 1, 2024</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter">
+                        <h3 data-en="Newsletter" data-es="Boletín">Newsletter</h3>
+                        <p data-en="Subscribe to get the latest tech updates delivered to your inbox." data-es="Suscríbete para recibir las últimas actualizaciones tecnológicas en tu bandeja de entrada.">Subscribe to get the latest tech updates delivered to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="" data-placeholder-en="Your email" data-placeholder-es="Tu email" required>
+                            <button type="submit" data-en="Subscribe" data-es="Suscribirse">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-en="&copy; 2024 My Blog. All rights reserved." data-es="&copy; 2024 Mi Blog. Todos los derechos reservados.">&copy; 2024 My Blog. All rights reserved.</p>
+                <p data-en="Technology & Innovation Blog" data-es="Blog de Tecnología e Innovación">Technology & Innovation Blog</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Philosophy & Personal Growth Blog" data-es="Blog de Filosofía y Crecimiento Personal">Philosophy & Personal Growth Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="My Blog" data-es="Mi Blog">My Blog</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="index.html#about" class="nav-link" data-en="About" data-es="Acerca de">About</a>
+                <a href="index.html#topics" class="nav-link" data-en="Topics" data-es="Temas">Topics</a>
+                <a href="index.html#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="switchLanguage('en')" class="lang-option">
+                            <span class="flag">🇺🇸</span> English
+                        </button>
+                        <button onclick="switchLanguage('es')" class="lang-option">
+                            <span class="flag">🇪🇸</span> Español
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="blog-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+                <span>/</span>
+                <span data-en="Philosophy & Personal Growth" data-es="Filosofía y Crecimiento Personal">Philosophy & Personal Growth</span>
+            </div>
+            <h1 data-en="Philosophy & Personal Growth" data-es="Filosofía y Crecimiento Personal">Philosophy & Personal Growth</h1>
+            <p data-en="Reflections on life, personal development, mindfulness, and the philosophical questions that drive us" data-es="Reflexiones sobre la vida, desarrollo personal, mindfulness y las preguntas filosóficas que nos impulsan">Reflections on life, personal development, mindfulness, and the philosophical questions that drive us</p>
+            <div class="blog-stats">
+                <span><i class="fas fa-newspaper"></i> <span data-en="15 Articles" data-es="15 Artículos">15 Articles</span></span>
+                <span><i class="fas fa-eye"></i> <span data-en="3.2k Views" data-es="3.2k Vistas">3.2k Views</span></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <main class="blog-main">
+                    <article class="featured-post">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop" alt="Mindfulness">
+                            <div class="post-badge" data-en="Featured" data-es="Destacado">Featured</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date" data-en="March 8, 2024" data-es="8 de Marzo, 2024">March 8, 2024</span>
+                                <span class="read-time" data-en="10 min read" data-es="10 min lectura">10 min read</span>
+                            </div>
+                            <h2 data-en="The Art of Mindful Living in a Chaotic World" data-es="El Arte de Vivir Conscientemente en un Mundo Caótico">The Art of Mindful Living in a Chaotic World</h2>
+                            <p data-en="Exploring how mindfulness practices can transform our daily experience and help us find peace amidst life's challenges..." data-es="Explorando cómo las prácticas de mindfulness pueden transformar nuestra experiencia diaria y ayudarnos a encontrar paz en medio de los desafíos de la vida...">Exploring how mindfulness practices can transform our daily experience and help us find peace amidst life's challenges...</p>
+                            <a href="#" class="read-more" data-en="Read Full Article" data-es="Leer Artículo Completo">Read Full Article</a>
+                        </div>
+                    </article>
+                </main>
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 data-en="Categories" data-es="Categorías">Categories</h3>
+                        <ul class="categories">
+                            <li><a href="#" data-en="Mindfulness" data-es="Mindfulness">Mindfulness</a> <span>(5)</span></li>
+                            <li><a href="#" data-en="Personal Development" data-es="Desarrollo Personal">Personal Development</a> <span>(4)</span></li>
+                            <li><a href="#" data-en="Life Philosophy" data-es="Filosofía de Vida">Life Philosophy</a> <span>(3)</span></li>
+                            <li><a href="#" data-en="Mental Health" data-es="Salud Mental">Mental Health</a> <span>(3)</span></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-en="&copy; 2024 My Blog. All rights reserved." data-es="&copy; 2024 Mi Blog. Todos los derechos reservados.">&copy; 2024 My Blog. All rights reserved.</p>
+                <p data-en="Philosophy & Personal Growth Blog" data-es="Blog de Filosofía y Crecimiento Personal">Philosophy & Personal Growth Blog</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

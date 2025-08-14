@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Books & Learning Blog" data-es="Blog de Libros y Aprendizaje">Books & Learning Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><h2 data-en="My Blog" data-es="Mi Blog">My Blog</h2></div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="index.html#about" class="nav-link" data-en="About" data-es="Acerca de">About</a>
+                <a href="index.html#topics" class="nav-link" data-en="Topics" data-es="Temas">Topics</a>
+                <a href="index.html#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-btn"><i class="fas fa-globe"></i><span id="current-lang">EN</span></button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="switchLanguage('en')" class="lang-option"><span class="flag">🇺🇸</span> English</button>
+                        <button onclick="switchLanguage('es')" class="lang-option"><span class="flag">🇪🇸</span> Español</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="blog-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html" data-en="Home" data-es="Inicio">Home</a><span>/</span><span data-en="Books & Learning" data-es="Libros y Aprendizaje">Books & Learning</span></div>
+            <h1 data-en="Books & Learning" data-es="Libros y Aprendizaje">Books & Learning</h1>
+            <p data-en="Book reviews, learning strategies, educational insights, and knowledge that has shaped my thinking" data-es="Reseñas de libros, estrategias de aprendizaje, conocimientos educativos y sabiduría que ha moldeado mi pensamiento">Book reviews, learning strategies, educational insights, and knowledge that has shaped my thinking</p>
+            <div class="blog-stats"><span><i class="fas fa-newspaper"></i> <span data-en="18 Articles" data-es="18 Artículos">18 Articles</span></span><span><i class="fas fa-eye"></i> <span data-en="4.2k Views" data-es="4.2k Vistas">4.2k Views</span></span></div>
+        </div>
+    </section>
+
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <main class="blog-main">
+                    <article class="featured-post">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=400&fit=crop" alt="Books">
+                            <div class="post-badge" data-en="Featured" data-es="Destacado">Featured</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta"><span class="post-date" data-en="March 5, 2024" data-es="5 de Marzo, 2024">March 5, 2024</span><span class="read-time" data-en="11 min read" data-es="11 min lectura">11 min read</span></div>
+                            <h2 data-en="Books That Changed My Perspective" data-es="Libros Que Cambiaron Mi Perspectiva">Books That Changed My Perspective</h2>
+                            <p data-en="A curated list of books that have profoundly impacted my thinking and worldview..." data-es="Una lista curada de libros que han impactado profundamente mi pensamiento y visión del mundo...">A curated list of books that have profoundly impacted my thinking and worldview...</p>
+                            <a href="#" class="read-more" data-en="Read Full Article" data-es="Leer Artículo Completo">Read Full Article</a>
+                        </div>
+                    </article>
+                </main>
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 data-en="Categories" data-es="Categorías">Categories</h3>
+                        <ul class="categories">
+                            <li><a href="#" data-en="Book Reviews" data-es="Reseñas de Libros">Book Reviews</a> <span>(8)</span></li>
+                            <li><a href="#" data-en="Learning Strategies" data-es="Estrategias de Aprendizaje">Learning Strategies</a> <span>(5)</span></li>
+                            <li><a href="#" data-en="Educational Psychology" data-es="Psicología Educativa">Educational Psychology</a> <span>(3)</span></li>
+                            <li><a href="#" data-en="Reading Tips" data-es="Consejos de Lectura">Reading Tips</a> <span>(2)</span></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-en="&copy; 2024 My Blog. All rights reserved." data-es="&copy; 2024 Mi Blog. Todos los derechos reservados.">&copy; 2024 My Blog. All rights reserved.</p>
+                <p data-en="Books & Learning Blog" data-es="Blog de Libros y Aprendizaje">Books & Learning Blog</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
