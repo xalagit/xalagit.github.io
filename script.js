@@ -111,7 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedLang && (savedLang === 'en' || savedLang === 'es')) {
         switchLanguage(savedLang);
     } else {
-        switchLanguage('es'); // Ensure Spanish is loaded if no preference
+        // Detectar idioma del navegador
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang && browserLang.toLowerCase().startsWith('es')) {
+            switchLanguage('es');
+        } else {
+            switchLanguage('en');
+        }
     }
 });
 
