@@ -119,27 +119,35 @@
                        I'd love to hear from you! Whether you want to discuss a specific topic, share your thoughts, or collaborate on something interesting.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        
+                        <a href="www.linkedin.com/in/natali-ailin-xala-cantizano-wilkinson-2b3b07275" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.researchgate.net/profile/Natali-Cantizano?ev=hdr_xprf" 
+                        class="social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                        <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                        <a href="https://github.com/xalagit" class="social-link"><i class="fab fa-github"></i></a>
+                        
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" required>
-                        <label for="name" data-en="Your Name" data-es="Tu Nombre">Your Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" required>
-                        <label for="email" data-en="Your Email" data-es="Tu Email">Your Email</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" required></textarea>
-                        <label for="message" data-en="Your Message" data-es="Tu Mensaje">Your Message</label>
-                    </div>
-                    <button type="submit" class="submit-btn" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
+                <form class="contact-form" action="https://formspree.io/f/mblkedgp" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name" data-en="Your Name" data-es="Tu Nombre">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email" data-en="Your Email" data-es="Tu Email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message" data-en="Your Message" data-es="Tu Mensaje">Your Message</label>
+                </div>
+                <button type="submit" class="submit-btn" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
                 </form>
+
             </div>
         </div>
     </section>
