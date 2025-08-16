@@ -523,3 +523,14 @@ body {
         margin: 0 1rem;
     }
 }
+
+.citation {
+    font-style: italic;
+    color: #1976d2;
+    text-decoration: underline dotted;
+    transition: color 0.2s;
+}
+
+.citation:hover {
+    color: #0d47a1;
+}
