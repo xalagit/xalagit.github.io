@@ -1,5 +1,5 @@
 // Language switching functionality
-let currentLanguage = 'en';
+let currentLanguage = 'es'; // Changed default to Spanish
 
 // Language switcher event listeners
 document.addEventListener('DOMContentLoaded', function() {
@@ -110,6 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('preferred-language');
     if (savedLang && (savedLang === 'en' || savedLang === 'es')) {
         switchLanguage(savedLang);
+    } else {
+        switchLanguage('es'); // Ensure Spanish is loaded if no preference
     }
 });
 
