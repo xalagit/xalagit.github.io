@@ -901,6 +901,10 @@ body {
     border: 1.5px solid var(--border-color);
 }
 
+.post-main p {
+    margin-bottom: 1rem;
+}
+
 /* Responsive adjustment */
 @media (max-width: 768px) {
     .post-main {
@@ -970,4 +974,9 @@ body {
     .sidebar-widget {
         padding: 1rem;
     }
+}
+
+/* Destaca el cuerpo del post y lo separa del header */
+.post-content .container {
+    margin-top: 3.5rem;
 }
