@@ -483,3 +483,7 @@
         padding: 1rem;
     }
 }
+
+strong, b {
+    font-weight: bold !important;
+}

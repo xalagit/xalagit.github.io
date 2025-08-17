@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="What should you keep in mind while writing?- My Blog" data-es="¿Qué deberías tener en cuenta mientras escribes? - Mi Blog"></title>
+    <meta name="description" content="¿Qué deberías tener en cuenta mientras escribes?">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/open-dyslexic.css">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="My Blog" data-es="Mi Blog">My Blog</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="../index.html#about" class="nav-link" data-en="About" data-es="Acerca de">About</a>
+                <a href="../index.html#topics" class="nav-link" data-en="Topics" data-es="Temas">Topics</a>
+                <a href="../index.html#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">ES</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="switchLanguage('en')" class="lang-option">
+                            <span class="flag">🇺🇸</span> English
+                        </button>
+                        <button onclick="switchLanguage('es')" class="lang-option">
+                            <span class="flag">🇪🇸</span> Español
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Header -->
+    <section class="post-header" style="background: linear-gradient(120deg, #1976d2 0%, #64b5f6 100%); color: white;">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 1rem;">
+                <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+                <span>/</span>
+                <a href="latex.html" data-en="LaTeX" data-es="LaTeX">LaTeX</a>
+                <span>/</span>
+                <span data-en="What should you keep in mind while writing?" data-es="¿Qué deberías tener en cuenta mientras escribes?"
+                >¿Qué deberías tener en cuenta mientras escribes?</span>
+            </div>
+            <div class="post-category">
+                <span data-en="LaTeX" data-es="LaTeX">LaTeX</span>
+            </div>
+            <h1 
+                data-en="What should you keep in mind while writing?" 
+                data-es="¿Qué deberías tener en cuenta mientras escribes?" 
+                style="margin-top: 0.5rem;">
+                ¿Qué deberías tener en cuenta mientras escribes?
+            </h1>
+            <div class="post-meta-header">
+                <div class="post-stats">
+                    <span><i class="fas fa-calendar"></i> <span data-en="March 8, 2022" data-es="8 de Marzo, 2022"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Content -->
+    <section class="post-content">
+        <div class="container">
+            <div class="post-layout">
+                <!-- Main Article -->
+                <article class="post-main">
+                    <div class="post-featured-image" style="margin-bottom: 2rem;">
+                        <img src="../imagenes/type.jpg" alt="Teclado" style="width:100%;max-width:700px;border-radius:12px;box-shadow:0 4px 24px rgba(25,118,210,0.15);">
+                    </div>
+                    <div class="post-article-content">
+                        <div class="post-intro">
+                        <p data-en="If you don't have automatic compilation, compile as often as you can to be on the safe side regarding the code. 
+                        Especially when you introduce a new command, because depending on a package or a new definition, the program 
+                        might interpret it as an error or give it a different meaning." data-es="Si no tienes compilación automática, compila tan a menudo como puedas para estar seguro respecto al código.
+                        Especialmente cuando introduces un nuevo comando, porque dependiendo de un paquete o una nueva definición,
+                        el programa podría interpretarlo como un error o darle un significado diferente.">
+                            Si no tienes compilación automática, compila tan a menudo como puedas para estar seguro respecto al código.
+                            Especialmente cuando introduces un nuevo comando, porque dependiendo de un paquete o una nueva definición,
+                            el programa podría interpretarlo como un error o darle un significado diferente.
+                        </p>
+
+                        <p data-en="As for the other details, there are plenty of manuals. In particular, I like the one of Alexánder Borbón A., Walter Mora F., and if it's not available, 
+                        you can always ask Google. But keep in mind something very important: type  LaTeX  instead of 
+                        &quot;latex &quot;, otherwise you’ll get results that have nothing to do with it. I say this because at the beginning I had 
+                        a hard time finding the right information because of that. 
+                        Good luck on your journey through the world of LaTeX!" data-es="Respecto a los otros detalles, hay muchos manuales. En particular, me gusta el de Alexánder Borbón A., Walter Mora F., y si no está disponible,
+                        siempre puedes preguntarle a Google. Pero ten en cuenta algo muy importante: escribe LaTeX en lugar de
+                        &quot;latex&quot;, de lo contrario obtendrás resultados que no tienen nada que ver con ello. Digo esto porque al principio tuve
+                        dificultades para encontrar la información correcta debido a eso.
+                        ¡Buena suerte en tu viaje por el mundo de LaTeX!">
+                            Respecto a los otros detalles, hay muchos manuales. En particular, me gusta el de Alexánder Borbón A., Walter Mora F., y si no está disponible,
+                            siempre puedes preguntarle a Google. Pero ten en cuenta algo muy importante: escribe <strong>LaTeX</strong> en lugar de
+                            "latex", de lo contrario obtendrás resultados que no tienen nada que ver con ello. Digo esto porque al principio tuve
+                            dificultades para encontrar la información correcta debido a eso.
+                            ¡Buena suerte en tu viaje por el mundo de LaTeX!
+                        </p>
+                            
+                            
+                        </div>
+                    </div>
+                    <!-- Post Tags -->
+                    <div class="post-tags" style="margin-top:2rem;">
+                        <h4 data-en="Tags:" data-es="Etiquetas:">Tags:</h4>
+                        <div class="tags-list">
+                            <span class="tag" data-en="manual" data-es="manual">manual</span>
+                            <span class="tag" data-en="writing" data-es="escritura">escritura</span>
+                        </div>
+                    </div>
+                   
+                </article>
+                <!-- Sidebar -->
+                <aside class="post-sidebar">
+                    <!-- Table of Contents -->
+                   
+                    
+                    
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-en="&copy; 2024 My Blog. All rights reserved." data-es="&copy; 2024 Mi Blog. Todos los derechos reservados.">&copy; 2024 My Blog. All rights reserved.</p>
+                <p data-en="Made with ❤️ for sharing ideas across diverse topics" data-es="Hecho con ❤️ para compartir ideas en diversos temas">Made with ❤️ for sharing ideas across diverse topics</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

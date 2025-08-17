@@ -980,3 +980,7 @@ body {
 .post-content .container {
     margin-top: 3.5rem;
 }
+
+strong, b {
+    font-weight: bold;
+}
