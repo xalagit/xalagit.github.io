@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="The reason - My Blog" data-es="El por qué - Mi Blog"></title>
+    <meta name="description" content="El por qué de usar LaTeX">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/open-dyslexic.css">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="My Blog" data-es="Mi Blog">My Blog</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="../index.html#about" class="nav-link" data-en="About" data-es="Acerca de">About</a>
+                <a href="../index.html#topics" class="nav-link" data-en="Topics" data-es="Temas">Topics</a>
+                <a href="../index.html#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">ES</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="switchLanguage('en')" class="lang-option">
+                            <span class="flag">🇺🇸</span> English
+                        </button>
+                        <button onclick="switchLanguage('es')" class="lang-option">
+                            <span class="flag">🇪🇸</span> Español
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Header -->
+    <section class="post-header" style="background: linear-gradient(120deg, #1976d2 0%, #64b5f6 100%); color: white;">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 1rem;">
+                <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+                <span>/</span>
+                <a href="latex.html" data-en="LaTeX" data-es="LaTeX">LaTeX</a>
+                <span>/</span>
+                <span data-en="The reason" data-es="El por qué"
+                >El por qué</span>
+            </div>
+            <div class="post-category">
+                <span data-en="LaTeX" data-es="LaTeX">LaTeX</span>
+            </div>
+            <h1 
+                data-en="The reason" 
+                data-es="El por qué" 
+                style="margin-top: 0.5rem;">
+                El por qué
+            </h1>
+            <div class="post-meta-header">
+                <div class="post-stats">
+                    <span><i class="fas fa-calendar"></i> <span data-en="March 8, 2022" data-es="8 de Marzo, 2022"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Content -->
+    <section class="post-content">
+        <div class="container">
+            <div class="post-layout">
+                <!-- Main Article -->
+                <article class="post-main">
+                    <div class="post-featured-image" style="margin-bottom: 2rem;">
+                        <img src="../imagenes/compilador.jpg" alt="codigo al azar" style="width:100%;max-width:700px;border-radius:12px;box-shadow:0 4px 24px rgba(25,118,210,0.15);">
+                    </div>
+                    <div class="post-article-content">
+                        <div class="post-intro">
+                            <h2 data-en="What compilers are there?" data-es="¿Qué compiladores hay?">¿Qué compiladores hay?</h2>
+                            
+                        </div>
+    </div>
+                    <!-- Post Tags -->
+                    <div class="post-tags" style="margin-top:2rem;">
+                        <h4 data-en="Tags:" data-es="Etiquetas:">Tags:</h4>
+                        <div class="tags-list">
+                            <span class="tag" data-en="Compiler" data-es="Compiladores">compiler</span>
+                            
+                        </div>
+                    </div>
+                   
+                </article>
+                <!-- Sidebar -->
+                <aside class="post-sidebar">
+                    <!-- Table of Contents -->
+                   
+                    
+                    
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="container">
+            <div class="comments-container">
+                <h3 data-en="Comments (3)" data-es="Comentarios (3)">Comments (3)</h3>
+                <!-- Comment Form -->
+                <div class="comment-form">
+                    <h4 data-en="Leave a Comment" data-es="Dejar un Comentario">Leave a Comment</h4>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="" data-placeholder-en="Your Name" data-placeholder-es="Tu Nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="" data-placeholder-en="Your Email" data-placeholder-es="Tu Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="" data-placeholder-en="Your comment..." data-placeholder-es="Tu comentario..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-en="Post Comment" data-es="Publicar Comentario">Post Comment</button>
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-en="&copy; 2024 My Blog. All rights reserved." data-es="&copy; 2024 Mi Blog. Todos los derechos reservados.">&copy; 2024 My Blog. All rights reserved.</p>
+                <p data-en="Made with ❤️ for sharing ideas across diverse topics" data-es="Hecho con ❤️ para compartir ideas en diversos temas">Made with ❤️ for sharing ideas across diverse topics</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
