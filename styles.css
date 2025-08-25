@@ -169,15 +169,32 @@ body {
 
 /* Hero Section */
 .hero {
-    background: var(--gradient);
-    color: var(--white);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 120px 20px 80px;
+  position: relative;
+  min-height: 100vh;            /* o height: 100vh si lo querés fijo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+  /* Fondo + overlay en una sola propiedad */
+  /* Opción 1: si styles.css está junto a /images */
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+              url("imagenes/fondo.jpg") center / cover no-repeat;
+
+  /* Si tu styles.css está en /css/ y la imagen en /images/ usa: */
+  /* background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+              url("../images/fondo.jpg") center / cover no-repeat; */
 }
+
+
+
+
+.hero-content {
+  position: relative; /* Para que quede arriba del overlay */
+  color: white;
+}
+
 
 .hero-content h1 {
     font-size: 3.5rem;
