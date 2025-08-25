@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Awesome: Privacy / Open Source - My Blog" data-es="Awesome: Privacidad / Código abierto - Mi Blog"></title>
+    <meta name="description" content="Recomendaciones de privacidad y software libre/código abierto.">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/open-dyslexic.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="My Blog" data-es="Mi Blog">Mi Blog</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link" data-en="Home" data-es="Inicio">Inicio</a>
+                <a href="../index.html#about" class="nav-link" data-en="About" data-es="Acerca de">Acerca de</a>
+                <a href="../index.html#topics" class="nav-link" data-en="Topics" data-es="Temas">Temas</a>
+                <a href="../index.html#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contacto</a>
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">ES</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="switchLanguage('en')" class="lang-option">
+                            <span class="flag">🇺🇸</span> English
+                        </button>
+                        <button onclick="switchLanguage('es')" class="lang-option">
+                            <span class="flag">🇪🇸</span> Español
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Header -->
+    <section class="post-header" style="background: linear-gradient(120deg, #2e7d32 0%, #66bb6a 100%); color: white;">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 1rem;">
+                <a href="../index.html" data-en="Home" data-es="Inicio">Inicio</a>
+                <span>/</span>
+                <span data-en="Privacy" data-es="Privacidad">Privacidad</span>
+                <span>/</span>
+                <span data-en="Awesome: Privacy / Open Source" data-es="Awesome: Privacidad / Código abierto">Awesome: Privacidad / Código abierto</span>
+            </div>
+            <div class="post-category">
+                <span data-en="Privacy" data-es="Privacidad">Privacidad</span>
+            </div>
+            <h1 
+                data-en="Awesome: Privacy / Open Source" 
+                data-es="Awesome: Privacidad / Código abierto" 
+                style="margin-top: 0.5rem;">
+                Awesome: Privacidad / Código abierto
+            </h1>
+            <div class="post-meta-header">
+                <div class="post-stats">
+                    <span><i class="fas fa-calendar"></i> <span data-en="August 23, 2025" data-es="23 de Agosto, 2025"></span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Content -->
+    <section class="post-content">
+        <div class="container">
+            <div class="post-layout">
+                <!-- Main Article -->
+                <article class="post-main">
+                    <div class="post-article-content">
+
+                        <p>👽 <strong data-en="Dear human" data-es="Querido humano">Querido humano</strong>, las recomendaciones puestas aquí son basadas en nuestra idiosincrasia, tú haz lo que quieras.</p>
+
+                        <p data-en="All recommendations are open source, and most are free software." 
+                           data-es="Todas las recomendaciones aquí son de código abierto, y la mayoría software libre.">
+                           Todas las recomendaciones aquí son de <a href="https://es.wikipedia.org/wiki/C%C3%B3digo_abierto" target="_blank">código abierto</a>, y la mayoría <a href="https://www.gnu.org/philosophy/free-sw.es.html" target="_blank">software libre</a>.
+                        </p>
+
+                        <p data-en="In each category, tools are listed in order of greater privacy." 
+                           data-es="En cada categoría, las recomendaciones están listadas en orden por mayor privacidad.">
+                           En cada categoría, las recomendaciones están listadas en orden por mayor privacidad.
+                        </p>
+
+                        <p><strong data-en="Main services to avoid:" data-es="Servicios principales a evitar:">Servicios principales a evitar:</strong> Google, Meta, X/Twitter, Amazon, TikTok, Microsoft</p>
+
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Ícono</th>
+                                    <th>Plataforma</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>🌐</td><td>Web</td></tr>
+                                <tr><td>🖥️</td><td>Escritorio</td></tr>
+                                <tr><td>📱</td><td>Móvil/Celular</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h2>📌 Sistema operativo</h2>
+                        <p>🖥️ <strong>Linux</strong>: sistema operativo libre, seguro y con mayor control sobre tu computadora.</p>
+                        <blockquote><strong>Kier:</strong> Para el promedio de las personas recomiendo usar Fedora, hoy en 2025.</blockquote>
+                        <ul>
+                            <li>📱 <a href="https://calyxos.org/">CalyxOS</a></li>
+                            <li>📱 <a href="https://wiki.lineageos.org/">LineageOS</a></li>
+                        </ul>
+
+                        <h2>📌 Apps (Aplicaciones)</h2>
+                        <p>Es recomendable instalar desde <a href="https://f-droid.org/">F-Droid</a>. Si necesitas apps privativas, usa <strong>Aurora Store</strong>.</p>
+
+                        <h3>Mensajería</h3>
+                        <ul>
+                            <li>📱🖥️ <a href="https://signal.org/">Signal</a></li>
+                        </ul>
+
+                        <h3>Gestor de contraseñas</h3>
+                        <ul>
+                            <li>📱🖥️ <a href="https://bitwarden.com/">Bitwarden</a></li>
+                        </ul>
+
+                        <h3>Navegadores</h3>
+                        <h4>Escritorio</h4>
+                        <ul>
+                            <li>🖥️ <a href="https://mullvad.net/en/browser">Mullvad</a></li>
+                            <li>🖥️ <a href="https://librewolf.net/">LibreWolf</a></li>
+                            <li>📱🖥️ <a href="https://brave.com/">Brave</a></li>
+                        </ul>
+                        <h4>Móvil</h4>
+                        <ul>
+                            <li>📱🖥️ Brave</li>
+                            <li>📱 Firefox Focus</li>
+                        </ul>
+
+                        <h4>Extensiones</h4>
+                        <ul>
+                            <li>Bitwarden Password Manager</li>
+                            <li>ClearURLs</li>
+                            <li>uBlock Origin</li>
+                            <li>Privacy Badger</li>
+                        </ul>
+
+                        <h3>Buscadores</h3>
+                        <ul>
+                            <li>🌐 Brave</li>
+                            <li>🌐 DuckDuckGo</li>
+                        </ul>
+
+                        <h3>Correo electrónico</h3>
+                        <ul>
+                            <li>🌐📱🖥️ Tuta</li>
+                            <li>🌐📱🖥️ Proton Mail</li>
+                        </ul>
+
+                        <h3>Video streaming</h3>
+                        <ul>
+                            <li>🖥️ <a href="https://freetubeapp.io/">Freetube</a></li>
+                            <li>📱 <a href="https://f-droid.org/es/packages/org.schabi.newpipe/">NewPipe</a></li>
+                        </ul>
+
+                        <h3>Bloqueador de trackers</h3>
+                        <ul>
+                            <li>📱 <a href="https://trackercontrol.org/">TrackerControl (TC)</a></li>
+                        </ul>
+
+                        <h2>📌 Fuentes</h2>
+                        <ul>
+                            <li><a href="https://www.nbtv.media/">Naomi Brockwell</a></li>
+                            <li><a href="https://tosdr.org/es">ToS;DR</a></li>
+                            <li><a href="https://disint.org/">Disint.org</a></li>
+                            <li><a href="https://awesome-privacy.xyz/">Awesome Privacy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Post Tags -->
+                    <div class="post-tags" style="margin-top:2rem;">
+                        <h4 data-en="Tags:" data-es="Etiquetas:">Etiquetas:</h4>
+                        <div class="tags-list">
+                            <span class="tag">Privacidad</span>
+                            <span class="tag">Código abierto</span>
+                            <span class="tag">Software libre</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="post-sidebar">
+                    <h3 data-en="Table of Contents" data-es="Índice">Índice</h3>
+                    <ul>
+                        <li><a href="#sistema-operativo">Sistema operativo</a></li>
+                        <li><a href="#apps">Apps</a></li>
+                        <li><a href="#navegadores">Navegadores</a></li>
+                        <li><a href="#buscadores">Buscadores</a></li>
+                        <li><a href="#correo-electronico">Correo electrónico</a></li>
+                        <li><a href="#video-streaming">Video streaming</a></li>
+                        <li><a href="#bloqueadores">Bloqueadores</a></li>
+                        <li><a href="#fuentes">Fuentes</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-en="&copy; 2025 My Blog. All rights reserved." data-es="&copy; 2025 Mi Blog. Todos los derechos reservados.">&copy; 2025 Mi Blog. Todos los derechos reservados.</p>
+                <p data-en="Made with ❤️ to protect privacy" data-es="Hecho con ❤️ para proteger la privacidad">Hecho con ❤️ para proteger la privacidad</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
