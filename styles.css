@@ -180,7 +180,7 @@ body {
   /* Fondo + overlay en una sola propiedad */
   /* Opción 1: si styles.css está junto a /images */
   background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-              url("imagenes/fondo.jpg") center / cover no-repeat;
+              url("imagenes/fondo.jpg") center / contain no-repeat;
 
   /* Si tu styles.css está en /css/ y la imagen en /images/ usa: */
   /* background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
