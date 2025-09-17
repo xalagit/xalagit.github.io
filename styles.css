@@ -547,6 +547,22 @@ body {
 }
 
 /* Featured Post */
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;  /* espacio entre tarjetas */
+  padding: 2rem;
+}
+
+.post {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  /* altura automática según contenido */
+}
+
 .featured-post {
     background: var(--white);
     border-radius: 15px;
@@ -639,16 +655,10 @@ body {
 }
 
 .blog-post .post-image {
-    height: 200px;
+    min-height: 200px; /* al menos 200px, pero crece si el contenido lo requiere */
     overflow: hidden;
 }
 
-.blog-post .post-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
 
 .blog-post:hover .post-image img {
     transform: scale(1.05);
