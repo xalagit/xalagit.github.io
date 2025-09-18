@@ -179,18 +179,68 @@ $ cd Documents/projects</code></pre>
                         <p data-en="Create new directories:" data-es="Crear nuevos directorios:">Create new directories:</p>
 
                         <div class="code-block">
-                            <pre><code># Create a single directory
+                            <pre><code># Create a single directory / crear un solo directorio
 $ mkdir my-project
 
-# Create multiple directories
+# Create multiple directories / crear múltiples directorios
 $ mkdir dir1 dir2 dir3
 
-# Create parent directories as needed
+# Create parent directories as needed / crear directorios padre según sea necesario
 $ mkdir -p projects/web-app/src/components
 
-# Create directory with specific permissions
+# Create directory with specific permissions / crear directorio con permisos específicos
 $ mkdir -m 755 public-folder</code></pre>
                         </div>
+                        <p data-en="The command mkdir is used to create directories. The -m flag (mode) sets the permissions of the new directory at the time of creation, using the same numeric (octal) format as chmod. Example: mkdir -m 700 private creates a directory named 'private' with permissions rwx------, while mkdir -m 755 public creates a directory named 'public' with permissions rwxr-xr-x." 
+                        data-es="El comando mkdir se usa para crear directorios. La flag -m (mode) establece los permisos del nuevo directorio en el momento de la creación, utilizando el mismo formato numérico (octal) que chmod. Ejemplo: mkdir -m 700 privado crea un directorio llamado 'privado' con permisos rwx------, mientras que mkdir -m 755 publico crea un directorio llamado 'publico' con permisos rwxr-xr-x.">
+                        The command mkdir is used to create directories. The -m flag (mode) sets the permissions of the new directory at the time of creation, using the same numeric (octal) format as chmod. Example: mkdir -m 700 private creates a directory named 'private' with permissions rwx------, while mkdir -m 755 public creates a directory named 'public' with permissions rwxr-xr-x.
+                        </p>
+
+                        <p data-en="In Unix-like systems, file and directory permissions are represented with the letters r, w, and x. 'r' means read (the ability to view the contents of a file or list the contents of a directory). 'w' means write (the ability to modify a file or create/delete items in a directory). 'x' means execute (the ability to run a file as a program, or to enter a directory and access its contents)." 
+                        data-es="En sistemas tipo Unix, los permisos de archivos y directorios se representan con las letras r, w y x. 'r' significa read (la capacidad de ver el contenido de un archivo o listar el contenido de un directorio). 'w' significa write (la capacidad de modificar un archivo o crear/eliminar elementos en un directorio). 'x' significa execute (la capacidad de ejecutar un archivo como programa, o de entrar en un directorio y acceder a su contenido).">
+                        In Unix-like systems, file and directory permissions are represented with the letters r, w, and x. 'r' means read (the ability to view the contents of a file or list the contents of a directory). 'w' means write (the ability to modify a file or create/delete items in a directory). 'x' means execute (the ability to run a file as a program, or to enter a directory and access its contents).
+                        </p>
+
+                        <p data-en="File permissions are shown in a 10-character string, for example: rwxr-xr--. The first character indicates the type (e.g., - for a file, d for a directory). The next nine characters are grouped in sets of three: the first set (rwx) applies to the owner, the second set (r-x) applies to the group, and the third set (r--) applies to others. Each position represents a permission: r for read, w for write, and x for execute." 
+                        data-es="Los permisos de archivos se muestran en una cadena de 10 caracteres, por ejemplo: rwxr-xr--. El primer carácter indica el tipo (por ejemplo, - para archivo, d para directorio). Los siguientes nueve caracteres se agrupan en conjuntos de tres: el primer grupo (rwx) corresponde al propietario, el segundo grupo (r-x) corresponde al grupo, y el tercer grupo (r--) corresponde a otros. Cada posición representa un permiso: r para read, w para write y x para execute.">
+                        File permissions are shown in a 10-character string, for example: rwxr-xr--. The first character indicates the type (e.g., - for a file, d for a directory). The next nine characters are grouped in sets of three: the first set (rwx) applies to the owner, the second set (r-x) applies to the group, and the third set (r--) applies to others. Each position represents a permission: r for read, w for write, and x for execute.
+                        </p>
+
+                        <p data-en="File permissions are divided into three levels: owner, group, and others. The owner is the user who created the file and has the main control over it. The group consists of users who belong to the same group as the file; they have the permissions assigned to the group (read, write, execute). Others are all users who are neither the owner nor members of the group; their permissions are usually more restricted for security." 
+                        data-es="Los permisos de archivos se dividen en tres niveles: propietario, grupo y otros. El propietario es el usuario que creó el archivo y tiene el control principal sobre él. El grupo consiste en usuarios que pertenecen al mismo grupo que el archivo; ellos tienen los permisos asignados al grupo (leer, escribir, ejecutar). Otros son todos los usuarios que no son ni el propietario ni miembros del grupo; sus permisos suelen ser más restrictivos por seguridad.">
+                        File permissions are divided into three levels: owner, group, and others. The owner is the user who created the file and has the main control over it. The group consists of users who belong to the same group as the file; they have the permissions assigned to the group (read, write, execute). Others are all users who are neither the owner nor members of the group; their permissions are usually more restricted for security.
+                        </p>
+
+                        <p data-en="Example of file permissions: rwxr-xr--. The first three characters 'rwx' apply to the owner (read, write, execute). The next three 'r-x' apply to the group (read and execute, no write). The last three 'r--' apply to others (read only)." 
+                        data-es="Ejemplo de permisos de archivos: rwxr-xr--. Los primeros tres caracteres 'rwx' corresponden al propietario (leer, escribir, ejecutar). Los siguientes tres 'r-x' corresponden al grupo (leer y ejecutar, sin escribir). Los últimos tres 'r--' corresponden a otros (solo lectura).">
+                        Example of file permissions: rwxr-xr--. The first three characters 'rwx' apply to the owner (read, write, execute). The next three 'r-x' apply to the group (read and execute, no write). The last three 'r--' apply to others (read only). 
+                        </p>
+
+                        <h3 data-en="For temporal directories" data-es="Para directorios temporales">For temporal directories</h3>
+
+                        <div class="code-block">
+                        <pre><code># Create a temporary directory / crear un directorio temporal
+$ mktemp -d
+
+# Create a temporary directory with a specific pattern / crear un directorio temporal con un patrón específico
+$ mktemp -d /tmp/mytempdir.XXXX
+
+# Remove a temporary directory manually / eliminar manualmente un directorio temporal
+$ rm -r /tmp/mytempdir.XYZ123
+
+
+                        </code></pre>
+                        </div>
+                        <p data-en="Note about duration" data-es="Nota sobre la duración">Note about duration</p>
+
+                        <ul>
+                        
+                        <li data-en="Directories in /tmp usually last until system reboot" data-es="Los directorios en /tmp suelen durar hasta el reinicio del sistema">Directories in /tmp usually last until system reboot</li>
+                        <li data-en="Directories in /var/tmp may last longer depending on system configuration" data-es="Los directorios en /var/tmp pueden durar más, dependiendo de la configuración del sistema">Directories in /var/tmp may last longer depending on system configuration</li>
+                        </ul>
+
+
+
 
                         <h3 data-en="5. touch - Create Files" data-es="5. touch - Crear Archivos">5. touch - Create Files</h3>
                         <p data-en="Create empty files or update file timestamps:" data-es="Crear archivos vacíos o actualizar marcas de tiempo de archivos:">Create empty files or update file timestamps:</p>
