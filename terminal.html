@@ -239,6 +239,26 @@ $ rm -r /tmp/mytempdir.XYZ123
                         <li data-en="Directories in /var/tmp may last longer depending on system configuration" data-es="Los directorios en /var/tmp pueden durar más, dependiendo de la configuración del sistema">Directories in /var/tmp may last longer depending on system configuration</li>
                         </ul>
 
+                        <h3 data-en="Recursively" data-es="Recursivamente">Recursively</h3>
+
+                        <p data-en="The -r (recursive) flag in Unix/Linux commands allows the command to operate on directories and their contents, including all subdirectories and files. It is commonly used with commands like cp, rm, and chmod to apply actions recursively." 
+                        data-es="La flag -r (recursivo) en comandos de Unix/Linux permite que el comando opere sobre directorios y su contenido, incluyendo todos los subdirectorios y archivos. Se usa comúnmente con comandos como cp, rm y chmod para aplicar acciones de manera recursiva.">
+                        The -r (recursive) flag in Unix/Linux commands allows the command to operate on directories and their contents, including all subdirectories and files. It is commonly used with commands like cp, rm, and chmod to apply actions recursively.
+                        </p>
+
+                        <div class="code-block">
+                            <pre><code># Copy a directory and all its contents / copiar un directorio y todo su contenido
+$ cp -r carpeta_original carpeta_copia
+
+# Remove a directory and all its contents / eliminar un directorio y todo su contenido
+$ rm -r carpeta_para_borrar
+
+# Change permissions of a directory and all files inside / cambiar permisos de un directorio y todos los archivos dentro
+$ chmod -R 755 carpeta
+                            </code></pre>
+                        </div>
+
+
 
 
 
@@ -246,15 +266,29 @@ $ rm -r /tmp/mytempdir.XYZ123
                         <p data-en="Create empty files or update file timestamps:" data-es="Crear archivos vacíos o actualizar marcas de tiempo de archivos:">Create empty files or update file timestamps:</p>
 
                         <div class="code-block">
-                            <pre><code># Create a new empty file
+                            <pre><code># Create a new empty file / crear un nuevo archivo vacío
 $ touch index.html
 
-# Create multiple files
+# Create multiple files / crear múltiples archivos
 $ touch style.css script.js README.md
 
-# Update timestamp of existing file
+# Update timestamp of existing file / actualizar marca de tiempo de archivo existente
 $ touch existing-file.txt</code></pre>
                         </div>
+
+                        <p data-en="Updating a file's timestamp means modifying the information that indicates when it was last created, modified, or accessed. Each file has three main timestamps: atime (last access), mtime (last modification), and ctime (last metadata change)." 
+                        data-es="Actualizar la marca de tiempo de un archivo significa modificar la información que indica cuándo fue creado, modificado o accedido por última vez. Cada archivo tiene tres marcas de tiempo principales: atime (último acceso), mtime (última modificación) y ctime (último cambio de metadata).">
+                        Updating a file's timestamp means modifying the information that indicates when it was last created, modified, or accessed. Each file has three main timestamps: atime (last access), mtime (last modification), and ctime (last metadata change).
+                        </p>
+
+                        <div class="code-block">
+                            <pre><code>
+
+# Check the timestamps of a file / verificar las marcas de tiempo de un archivo
+$ stat archivo.txt
+                            </code></pre>
+                        </div>
+
 
                         <h3 data-en="6. cp - Copy Files and Directories" data-es="6. cp - Copiar Archivos y Directorios">6. cp - Copy Files and Directories</h3>
                         <div class="code-block">
@@ -295,22 +329,22 @@ $ mv file1.txt file2.txt file3.txt /destination/</code></pre>
                         </p>
 
                         <div class="code-block">
-                            <pre><code># Remove a file
+                            <pre><code># Remove a file / eliminar un archivo
 $ rm file.txt
 
-# Remove multiple files
+# Remove multiple files / eliminar múltiples archivos
 $ rm file1.txt file2.txt file3.txt
 
-# Remove directory and its contents recursively
+# Remove directory and its contents recursively /eliminar directorio y su contenido recursivamente
 $ rm -r directory/
 
-# Force removal (no prompts)
+# Force removal (no prompts) /eliminación forzada (sin avisos)
 $ rm -f file.txt
 
-# Interactive removal (asks for confirmation)
+# Interactive removal (asks for confirmation) /eliminación interactiva (pide confirmación)
 $ rm -i important-file.txt
 
-# Remove empty directory
+# Remove empty directory / eliminar directorio vacío
 $ rmdir empty-directory/</code></pre>
                         </div>
 
@@ -323,16 +357,16 @@ $ rmdir empty-directory/</code></pre>
 
                         <h3 data-en="9. cat - Display File Contents" data-es="9. cat - Mostrar Contenidos del Archivo">9. cat - Display File Contents</h3>
                         <div class="code-block">
-                            <pre><code># Display entire file content
+                            <pre><code># Display entire file content / mostrar todo el contenido del archivo
 $ cat file.txt
 
-# Display multiple files
+# Display multiple files / mostrar múltiples archivos
 $ cat file1.txt file2.txt
 
-# Display with line numbers
+# Display with line numbers /   mostrar con números de línea
 $ cat -n file.txt
 
-# Create a new file with content
+# Create a new file with content / crear un nuevo archivo con contenido
 $ cat > new-file.txt
 Type your content here
 Press Ctrl+D to save and exit</code></pre>
@@ -342,7 +376,7 @@ Press Ctrl+D to save and exit</code></pre>
                         <p data-en="Better for viewing large files:" data-es="Mejor para ver archivos grandes:">Better for viewing large files:</p>
 
                         <div class="code-block">
-                            <pre><code># View file with less (recommended)
+                            <pre><code># View file with less (recommended) / ver archivo con less (recomendado)
 $ less large-file.txt
 
 # Navigation in less:
@@ -351,25 +385,25 @@ $ less large-file.txt
 # - /pattern: search for pattern
 # - q: quit
 
-# View with more (simpler version)
+# View with more (simpler version) /ver con more (versión más simple)
 $ more file.txt</code></pre>
                         </div>
 
                         <h3 data-en="11. head/tail - View Beginning/End of Files" data-es="11. head/tail - Ver Inicio/Final de Archivos">11. head/tail - View Beginning/End of Files</h3>
                         <div class="code-block">
-                            <pre><code># Show first 10 lines (default)
+                            <pre><code># Show first 10 lines (default) / mostrar primeras 10 líneas (por defecto)
 $ head file.txt
 
-# Show first 20 lines
+# Show first 20 lines / mostrar primeras 20 líneas
 $ head -n 20 file.txt
 
-# Show last 10 lines
+# Show last 10 lines / mostrar últimas 10 líneas
 $ tail file.txt
 
-# Show last 15 lines
+# Show last 15 lines / mostrar últimas 15 líneas
 $ tail -n 15 file.txt
 
-# Follow file changes (great for logs)
+# Follow file changes (great for logs) / seguir cambios en el archivo (genial para logs)
 $ tail -f logfile.txt</code></pre>
                         </div>
 
@@ -379,25 +413,25 @@ $ tail -f logfile.txt</code></pre>
                         <p data-en="One of the most powerful text processing commands:" data-es="Uno de los comandos de procesamiento de texto más poderosos:">One of the most powerful text processing commands:</p>
 
                         <div class="code-block">
-                            <pre><code># Search for a pattern in a file
+                            <pre><code># Search for a pattern in a file / buscar un patrón en un archivo
 $ grep "error" logfile.txt
 
-# Case-insensitive search
+# Case-insensitive search /búsqueda sin distinción de mayúsculas
 $ grep -i "ERROR" logfile.txt
 
-# Search recursively in directories
+# Search recursively in directories / buscar recursivamente en directorios
 $ grep -r "function" src/
 
-# Show line numbers
+# Show line numbers / mostrar números de línea
 $ grep -n "TODO" *.js
 
-# Search for whole words only
+# Search for whole words only / buscar solo palabras completas
 $ grep -w "test" file.txt
 
-# Invert match (show lines that don't match)
+# Invert match (show lines that don't match) / coincidencia invertida (mostrar líneas que no coinciden)
 $ grep -v "debug" logfile.txt
 
-# Count matching lines
+# Count matching lines / contar líneas coincidentes
 $ grep -c "error" logfile.txt</code></pre>
                         </div>
 
