@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Essential Terminal Commands  - My Blog" data-es="Comandos de Terminal Esenciales  - Mi Blog">Essential Terminal Commands - My Blog</title>
+    <meta name="description" content="A comprehensive guide to the most commonly used terminal commands and how they are used in daily development workflows. From basic navigation to advanced file operations.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/open-dyslexic.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="My Blog" data-es="Mi Blog">My Blog</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="index.html#about" class="nav-link" data-en="About" data-es="Acerca de">About</a>
+                <a href="index.html#topics" class="nav-link" data-en="Topics" data-es="Temas">Topics</a>
+                <a href="index.html#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="switchLanguage('en')" class="lang-option">
+                            <span class="flag">🇺🇸</span> English
+                        </button>
+                        <button onclick="switchLanguage('es')" class="lang-option">
+                            <span class="flag">🇪🇸</span> Español
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Post Header -->
+    <section class="post-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+                <span>/</span>
+                <span data-en="Essential Terminal Commands" data-es="Comandos de Terminal Esenciales">Essential Terminal Commands</span>
+            </div>
+            
+            
+            
+            <h1 data-en="Essential Terminal Commands" data-es="Comandos de Terminal Esenciales">Essential Terminal Commands </h1>
+            
+            <div class="post-meta-header">
+                
+                <div class="post-stats">
+                    <span><i class="fas fa-calendar"></i> <span data-en="September 17, 2025" data-es="17 de Septiembre, 2025">September 17, 2025</span></span>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Content -->
+    <section class="post-content">
+        <div class="container">
+            <div class="post-layout">
+                <!-- Main Article -->
+                <article class="post-main">
+                    <div class="post-featured-image">
+                        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1200&h=600&fit=crop" alt="Terminal and Command Line Interface">
+                    </div>
+
+                    <div class="post-article-content">
+                        <div class="post-intro" data-en="I find using the terminal fun, and one of the joys of using Linux. It often makes things easier. This post is a few notes on useful commands that I'm sharing in case you find them useful, like they were for me." data-es="Encuentro divertido usar la terminal, y es una de las alegrías de usar Linux. A menudo hace las cosas más fáciles. Esta publicación son algunas notas sobre comandos útiles que estoy compartiendo en caso de que los encuentres útiles, como lo fueron para mí.">
+                            I find using the terminal fun, and one of the joys of using Linux. It often makes things easier. This post is a few notes on useful commands that I'm sharing in case you find them useful, like they were for me.
+                        </div>
+
+                        <h2 id="navigation-commands" data-en="Navigation and File System Commands" data-es="Comandos de Navegación y Sistema de Archivos">Navigation and File System Commands</h2>
+                        
+                        <h3 data-en="1. pwd - Print Working Directory" data-es="1. pwd - Mostrar Directorio de Trabajo">1. pwd - Print Working Directory</h3>
+                        <p data-en="The most fundamental command - shows you exactly where you are in the file system." data-es="El comando más fundamental - te muestra exactamente dónde estás en el sistema de archivos.">
+                            The most fundamental command - shows you exactly where you are in the file system.
+                        </p>
+                        
+                        <div class="code-block">
+                            <pre><code>$ pwd
+/home/xala/projects/my-blog</code></pre>
+                        </div>
+
+                        <p data-en="Use this whenever you're lost or need to confirm your current location before running other commands." data-es="Úsalo siempre que estés perdido o necesites confirmar tu ubicación actual antes de ejecutar otros comandos.">
+                            Use this whenever you're lost or need to confirm your current location before running other commands.
+                        </p>
+
+                        <h3 data-en="2. ls - List Directory Contents" data-es="2. ls - Listar Contenidos del Directorio">2. ls - List Directory Contents</h3>
+                        <p data-en="Lists files and directories in the current location. This command has numerous useful flags:" data-es="Lista archivos y directorios en la ubicación actual. Este comando tiene numerosas banderas útiles:">
+                            Lists files and directories in the current location. This command has numerous useful flags:
+                        </p>
+
+                        <div class="code-block">
+                            <pre><code># Basic listing
+$ ls
+
+# Detailed listing with permissions, sizes, dates
+$ ls -l
+
+# Show hidden files (starting with .)
+$ ls -a
+
+# Combine flags for detailed view including hidden files
+$ ls -la
+
+# Human-readable file sizes
+$ ls -lh
+
+# Sort by modification time (newest first)
+$ ls -lt</code></pre>
+                        </div>
+
+                        <p data-en="Note: human-readable files provide clarity. They allow you to see at a glance what a file contains without needing specialized software. Example: a .txt, .csv, or .json file can be opened and read easily, in contrast to a .bin or .exe." 
+                        data-es="Nota: los archivos human-readable aportan claridad. Permiten entender de un vistazo qué contiene un archivo sin necesidad de un software especializado. Ejemplo: un archivo .txt, .csv o .json puede abrirse y leerse fácilmente, en contraste con un .bin o .exe.">
+                        Note: human-readable files provide clarity. They allow you to see at a glance what a file contains without needing specialized software. Example: a .txt, .csv, or .json file can be opened and read easily, in contrast to a .bin or .exe.
+                        </p>
+
+
+                        <h3 data-en="3. cd - Change Directory" data-es="3. cd - Cambiar Directorio">3. cd - Change Directory</h3>
+                        <p data-en="Navigate between directories efficiently:" data-es="Navega entre directorios de manera eficiente:">Navigate between directories efficiently:</p>
+
+                        <div class="code-block">
+                            <pre><code># Go to a specific directory
+$ cd /path/to/directory
+
+# Go to home directory
+$ cd ~
+# or simply
+$ cd
+
+# Go up one level
+$ cd ..
+
+# Go up two levels
+$ cd ../..
+
+# Go to the previous directory
+$ cd -
+
+# Navigate to subdirectory
+$ cd Documents/projects</code></pre>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4 data-en="Pro Tip: Tab Completion" data-es="Consejo Pro: Completado con Tab">Pro Tip: Tab Completion</h4>
+                            <p data-en="Use the Tab key to auto-complete directory and file names. This saves time and prevents typos. Press Tab twice to see all available options if there are multiple matches." data-es="Usa la tecla Tab para autocompletar nombres de directorios y archivos. Esto ahorra tiempo y previene errores tipográficos. Presiona Tab dos veces para ver todas las opciones disponibles si hay múltiples coincidencias.">
+                                Use the Tab key to auto-complete directory and file names. This saves time and prevents typos. Press Tab twice to see all available options if there are multiple matches.
+                            </p>
+                        </div>
+
+                        <h2 id="file-operations" data-en="File Operations Commands" data-es="Comandos de Operaciones de Archivos">File Operations Commands</h2>
+
+                        <h3 data-en="4. mkdir - Make Directory" data-es="4. mkdir - Crear Directorio">4. mkdir - Make Directory</h3>
+                        <p data-en="Create new directories:" data-es="Crear nuevos directorios:">Create new directories:</p>
+
+                        <div class="code-block">
+                            <pre><code># Create a single directory
+$ mkdir my-project
+
+# Create multiple directories
+$ mkdir dir1 dir2 dir3
+
+# Create parent directories as needed
+$ mkdir -p projects/web-app/src/components
+
+# Create directory with specific permissions
+$ mkdir -m 755 public-folder</code></pre>
+                        </div>
+
+                        <h3 data-en="5. touch - Create Files" data-es="5. touch - Crear Archivos">5. touch - Create Files</h3>
+                        <p data-en="Create empty files or update file timestamps:" data-es="Crear archivos vacíos o actualizar marcas de tiempo de archivos:">Create empty files or update file timestamps:</p>
+
+                        <div class="code-block">
+                            <pre><code># Create a new empty file
+$ touch index.html
+
+# Create multiple files
+$ touch style.css script.js README.md
+
+# Update timestamp of existing file
+$ touch existing-file.txt</code></pre>
+                        </div>
+
+                        <h3 data-en="6. cp - Copy Files and Directories" data-es="6. cp - Copiar Archivos y Directorios">6. cp - Copy Files and Directories</h3>
+                        <div class="code-block">
+                            <pre><code># Copy a file
+$ cp source.txt destination.txt
+
+# Copy a file to another directory
+$ cp file.txt /path/to/directory/
+
+# Copy directory recursively
+$ cp -r source-directory/ destination-directory/
+
+# Copy with verbose output
+$ cp -v file.txt backup/
+
+# Copy and preserve file attributes
+$ cp -p original.txt backup.txt</code></pre>
+                        </div>
+
+                        <h3 data-en="7. mv - Move/Rename Files" data-es="7. mv - Mover/Renombrar Archivos">7. mv - Move/Rename Files</h3>
+                        <div class="code-block">
+                            <pre><code># Rename a file
+$ mv old-name.txt new-name.txt
+
+# Move file to another directory
+$ mv file.txt /path/to/directory/
+
+# Move and rename simultaneously
+$ mv old-file.txt /new/location/new-name.txt
+
+# Move multiple files to a directory
+$ mv file1.txt file2.txt file3.txt /destination/</code></pre>
+                        </div>
+
+                        <h3 data-en="8. rm - Remove Files and Directories" data-es="8. rm - Eliminar Archivos y Directorios">8. rm - Remove Files and Directories</h3>
+                        <p data-en="⚠️ Be very careful with this command - deleted files are usually not recoverable!" data-es="⚠️ Ten mucho cuidado con este comando - ¡los archivos eliminados usualmente no se pueden recuperar!">
+                            ⚠️ Be very careful with this command - deleted files are usually not recoverable!
+                        </p>
+
+                        <div class="code-block">
+                            <pre><code># Remove a file
+$ rm file.txt
+
+# Remove multiple files
+$ rm file1.txt file2.txt file3.txt
+
+# Remove directory and its contents recursively
+$ rm -r directory/
+
+# Force removal (no prompts)
+$ rm -f file.txt
+
+# Interactive removal (asks for confirmation)
+$ rm -i important-file.txt
+
+# Remove empty directory
+$ rmdir empty-directory/</code></pre>
+                        </div>
+
+                        <div class="post-image-inline">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop" alt="Developer working with terminal commands">
+                            <caption data-en="Mastering terminal commands is essential for efficient development workflows" data-es="Dominar los comandos de terminal es esencial para flujos de trabajo de desarrollo eficientes">Mastering terminal commands is essential for efficient development workflows</caption>
+                        </div>
+
+                        <h2 id="file-content" data-en="File Content Commands" data-es="Comandos de Contenido de Archivos">File Content Commands</h2>
+
+                        <h3 data-en="9. cat - Display File Contents" data-es="9. cat - Mostrar Contenidos del Archivo">9. cat - Display File Contents</h3>
+                        <div class="code-block">
+                            <pre><code># Display entire file content
+$ cat file.txt
+
+# Display multiple files
+$ cat file1.txt file2.txt
+
+# Display with line numbers
+$ cat -n file.txt
+
+# Create a new file with content
+$ cat > new-file.txt
+Type your content here
+Press Ctrl+D to save and exit</code></pre>
+                        </div>
+
+                        <h3 data-en="10. less/more - View File Contents Page by Page" data-es="10. less/more - Ver Contenidos del Archivo Página por Página">10. less/more - View File Contents Page by Page</h3>
+                        <p data-en="Better for viewing large files:" data-es="Mejor para ver archivos grandes:">Better for viewing large files:</p>
+
+                        <div class="code-block">
+                            <pre><code># View file with less (recommended)
+$ less large-file.txt
+
+# Navigation in less:
+# - Space or f: forward one page
+# - b: backward one page
+# - /pattern: search for pattern
+# - q: quit
+
+# View with more (simpler version)
+$ more file.txt</code></pre>
+                        </div>
+
+                        <h3 data-en="11. head/tail - View Beginning/End of Files" data-es="11. head/tail - Ver Inicio/Final de Archivos">11. head/tail - View Beginning/End of Files</h3>
+                        <div class="code-block">
+                            <pre><code># Show first 10 lines (default)
+$ head file.txt
+
+# Show first 20 lines
+$ head -n 20 file.txt
+
+# Show last 10 lines
+$ tail file.txt
+
+# Show last 15 lines
+$ tail -n 15 file.txt
+
+# Follow file changes (great for logs)
+$ tail -f logfile.txt</code></pre>
+                        </div>
+
+                        <h2 id="search-filter" data-en="Search and Filter Commands" data-es="Comandos de Búsqueda y Filtro">Search and Filter Commands</h2>
+
+                        <h3 data-en="12. grep - Search Text Patterns" data-es="12. grep - Buscar Patrones de Texto">12. grep - Search Text Patterns</h3>
+                        <p data-en="One of the most powerful text processing commands:" data-es="Uno de los comandos de procesamiento de texto más poderosos:">One of the most powerful text processing commands:</p>
+
+                        <div class="code-block">
+                            <pre><code># Search for a pattern in a file
+$ grep "error" logfile.txt
+
+# Case-insensitive search
+$ grep -i "ERROR" logfile.txt
+
+# Search recursively in directories
+$ grep -r "function" src/
+
+# Show line numbers
+$ grep -n "TODO" *.js
+
+# Search for whole words only
+$ grep -w "test" file.txt
+
+# Invert match (show lines that don't match)
+$ grep -v "debug" logfile.txt
+
+# Count matching lines
+$ grep -c "error" logfile.txt</code></pre>
+                        </div>
+
+                        <h3 data-en="13. find - Search for Files and Directories" data-es="13. find - Buscar Archivos y Directorios">13. find - Search for Files and Directories</h3>
+                        <div class="code-block">
+                            <pre><code># Find files by name
+$ find . -name "*.js"
+
+# Find directories only
+$ find . -type d -name "node_modules"
+
+# Find files by size
+$ find . -size +100M
+
+# Find files modified in last 7 days
+$ find . -mtime -7
+
+# Find and execute command on results
+$ find . -name "*.log" -delete
+
+# Find files with specific permissions
+$ find . -perm 644</code></pre>
+                        </div>
+
+                        <h2 id="system-info" data-en="System Information Commands" data-es="Comandos de Información del Sistema">System Information Commands</h2>
+
+                        <h3 data-en="14. ps - Process Status" data-es="14. ps - Estado de Procesos">14. ps - Process Status</h3>
+                        <div class="code-block">
+                            <pre><code># Show running processes for current user
+$ ps
+
+# Show all processes with detailed info
+$ ps aux
+
+# Show processes in tree format
+$ ps -ef --forest
+
+# Find specific process
+$ ps aux | grep "nginx"</code></pre>
+                        </div>
+
+                        <h3 data-en="15. top/htop - System Activity Monitor" data-es="15. top/htop - Monitor de Actividad del Sistema">15. top/htop - System Activity Monitor</h3>
+                        <div class="code-block">
+                            <pre><code># Show real-time system statistics
+$ top
+
+# Enhanced version (if installed)
+$ htop
+
+# Sort by memory usage in top
+# Press Shift+M while top is running
+
+# Sort by CPU usage in top
+# Press Shift+P while top is running</code></pre>
+                        </div>
+
+                        <h3 data-en="16. df/du - Disk Space Usage" data-es="16. df/du - Uso de Espacio en Disco">16. df/du - Disk Space Usage</h3>
+                        <div class="code-block">
+                            <pre><code># Show filesystem disk space usage
+$ df -h
+
+# Show directory size
+$ du -h directory/
+
+# Show size of current directory
+$ du -sh .
+
+# Show sizes of all files and directories
+$ du -ah</code></pre>
+                        </div>
+
+                        <blockquote>
+                            <p data-en="The terminal is not just a tool, it's a superpower. Once you understand these fundamental commands, you'll find yourself accomplishing tasks in seconds that would take minutes with a graphical interface." data-es="La terminal no es solo una herramienta, es un superpoder. Una vez que entiendas estos comandos fundamentales, te encontrarás realizando tareas en segundos que tomarían minutos con una interfaz gráfica.">"The terminal is not just a tool, it's a superpower. Once you understand these fundamental commands, you'll find yourself accomplishing tasks in seconds that would take minutes with a graphical interface."</p>
+                        </blockquote>
+
+                        <h2 id="network-commands" data-en="Network and Connectivity Commands" data-es="Comandos de Red y Conectividad">Network and Connectivity Commands</h2>
+
+                        <h3 data-en="17. wget/curl - Download Files" data-es="17. wget/curl - Descargar Archivos">17. wget/curl - Download Files</h3>
+                        <div class="code-block">
+                            <pre><code># Download file with wget
+$ wget https://example.com/file.zip
+
+# Download with curl
+$ curl -O https://example.com/file.zip
+
+# Download and save with different name
+$ curl https://example.com/data.json -o my-data.json
+
+# Make HTTP request and see response
+$ curl -v https://api.example.com/users</code></pre>
+                        </div>
+
+                        <h3 data-en="18. ssh - Secure Shell" data-es="18. ssh - Shell Seguro">18. ssh - Secure Shell</h3>
+                        <div class="code-block">
+                            <pre><code># Connect to remote server
+$ ssh user@hostname
+
+# Connect on specific port
+$ ssh -p 2222 user@hostname
+
+# Copy files to remote server
+$ scp file.txt user@hostname:/path/to/destination/
+
+# Copy files from remote server
+$ scp user@hostname:/path/to/file.txt ./local-directory/</code></pre>
+                        </div>
+
+                        <h2 id="advanced-tips" data-en="Advanced Tips and Combinations" data-es="Consejos Avanzados y Combinaciones">Advanced Tips and Combinations</h2>
+
+                        <h3 data-en="Pipe Operations" data-es="Operaciones de Tubería">Pipe Operations</h3>
+                        <p data-en="Combine commands using pipes (|) to create powerful workflows:" data-es="Combina comandos usando tuberías (|) para crear flujos de trabajo poderosos:">
+                            Combine commands using pipes (|) to create powerful workflows:
+                        </p>
+
+                        <div class="code-block">
+                            <pre><code># Count lines in a file
+$ cat file.txt | wc -l
+
+# Find and count specific pattern
+$ grep "error" logfile.txt | wc -l
+
+# Show only unique lines
+$ sort file.txt | uniq
+
+# Find largest files in directory
+$ ls -la | sort -k5 -nr | head -10
+
+# Monitor real-time log for specific pattern
+$ tail -f access.log | grep "404"</code></pre>
+                        </div>
+
+                        <h3 data-en="Command History and Shortcuts" data-es="Historial de Comandos y Atajos">Command History and Shortcuts</h3>
+                        <div class="code-block">
+                            <pre><code># Show command history
+$ history
+
+# Re-run last command
+$ !!
+
+# Re-run specific command from history
+$ !123
+
+# Search command history
+$ history | grep "git"
+
+# Clear command history
+$ history -c</code></pre>
+                        </div>
+
+                        <h3 data-en="Keyboard Shortcuts" data-es="Atajos de Teclado">Keyboard Shortcuts</h3>
+                        <ul>
+                            <li data-en="Ctrl+C: Stop/cancel current command" data-es="Ctrl+C: Detener/cancelar comando actual"><strong>Ctrl+C</strong>: Stop/cancel current command</li>
+                            <li data-en="Ctrl+D: Exit terminal/logout" data-es="Ctrl+D: Salir de terminal/cerrar sesión"><strong>Ctrl+D</strong>: Exit terminal/logout</li>
+                            <li data-en="Ctrl+L: Clear screen (same as 'clear' command)" data-es="Ctrl+L: Limpiar pantalla (igual que comando 'clear')"><strong>Ctrl+L</strong>: Clear screen (same as 'clear' command)</li>
+                            <li data-en="Ctrl+A: Move cursor to beginning of line" data-es="Ctrl+A: Mover cursor al inicio de línea"><strong>Ctrl+A</strong>: Move cursor to beginning of line</li>
+                            <li data-en="Ctrl+E: Move cursor to end of line" data-es="Ctrl+E: Mover cursor al final de línea"><strong>Ctrl+E</strong>: Move cursor to end of line</li>
+                            <li data-en="Tab: Auto-complete commands and filenames" data-es="Tab: Autocompletar comandos y nombres de archivos"><strong>Tab</strong>: Auto-complete commands and filenames</li>
+                        </ul>
+
+                        <h2 data-en="Best Practices and Safety Tips" data-es="Mejores Prácticas y Consejos de Seguridad">Best Practices and Safety Tips</h2>
+                        
+                        <div class="highlight-box">
+                            <h4 data-en="Safety Guidelines" data-es="Pautas de Seguridad">Safety Guidelines</h4>
+                            <ul>
+                                <li data-en="Always double-check commands before pressing Enter, especially with rm, mv, and chmod" data-es="Siempre verifica los comandos dos veces antes de presionar Enter, especialmente con rm, mv, y chmod">Always double-check commands before pressing Enter, especially with <code>rm</code>, <code>mv</code>, and <code>chmod</code></li>
+                                <li data-en="Use the -i flag with destructive commands for confirmation prompts" data-es="Usa la bandera -i con comandos destructivos para prompts de confirmación">Use the <code>-i</code> flag with destructive commands for confirmation prompts</li>
+                                <li data-en="Test commands in a safe directory first" data-es="Prueba comandos en un directorio seguro primero">Test commands in a safe directory first</li>
+                                <li data-en="Keep backups of important files" data-es="Mantén copias de seguridad de archivos importantes">Keep backups of important files</li>
+                                <li data-en="Use version control (Git) for code projects" data-es="Usa control de versiones (Git) para proyectos de código">Use version control (Git) for code projects</li>
+                            </ul>
+                        </div>
+
+                        <h2 data-en="Conclusion: Building Your Command Line Confidence" data-es="Conclusión: Construyendo tu Confianza en Línea de Comandos">Conclusion: Building Your Command Line Confidence</h2>
+                        <p data-en="Mastering these essential terminal commands is a journey, not a destination. Start with the basics like pwd, ls, and cd, then gradually incorporate more advanced commands into your workflow. The key is consistent practice and not being afraid to experiment in safe environments." data-es="Dominar estos comandos esenciales de terminal es un viaje, no un destino. Comienza con los básicos como pwd, ls, y cd, luego incorpora gradualmente comandos más avanzados en tu flujo de trabajo. La clave es la práctica consistente y no tener miedo de experimentar en entornos seguros.">
+                            Mastering these essential terminal commands is a journey, not a destination. Start with the basics like <code>pwd</code>, <code>ls</code>, and <code>cd</code>, then gradually incorporate more advanced commands into your workflow. The key is consistent practice and not being afraid to experiment in safe environments.
+                        </p>
+
+                        <p data-en="Remember that every expert was once a beginner. The terminal might seem intimidating at first, but with these fundamental commands in your toolkit, you're well on your way to becoming a command line power user. Keep practicing, stay curious, and don't hesitate to explore the man pages (man command-name) for detailed documentation on any command." data-es="Recuerda que cada experto fue una vez principiante. La terminal puede parecer intimidante al principio, pero con estos comandos fundamentales en tu kit de herramientas, estás bien encaminado para convertirte en un usuario avanzado de línea de comandos. Sigue practicando, mantente curioso, y no dudes en explorar las páginas man (man nombre-comando) para documentación detallada de cualquier comando.">
+                            Remember that every expert was once a beginner. The terminal might seem intimidating at first, but with these fundamental commands in your toolkit, you're well on your way to becoming a command line power user. Keep practicing, stay curious, and don't hesitate to explore the man pages (<code>man command-name</code>) for detailed documentation on any command.
+                        </p>
+                    </div>
+
+                    <!-- Post Tags -->
+                    <div class="post-tags">
+                        <h4 data-en="Tags:" data-es="Etiquetas:">Tags:</h4>
+                        <div class="tags-list">
+                            <span class="tag" data-en="Terminal" data-es="Terminal">Terminal</span>
+                            <span class="tag" data-en="Command Line" data-es="Línea de Comandos">Command Line</span>
+                            <span class="tag" data-en="Linux" data-es="Linux">Linux</span>
+                            <span class="tag" data-en="Development Tools" data-es="Herramientas de Desarrollo">Development Tools</span>
+                            <span class="tag" data-en="Productivity" data-es="Productividad">Productivity</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Share Post -->
+                    <div class="post-share">
+                        <h4 data-en="Share this article:" data-es="Compartir este artículo:">Share this article:</h4>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i> <span data-en="Twitter" data-es="Twitter">Twitter</span></a>
+                            <a href="#" class="share-btn facebook"><i class="fab fa-facebook"></i> <span data-en="Facebook" data-es="Facebook">Facebook</span></a>
+                            <a href="#" class="share-btn linkedin"><i class="fab fa-linkedin"></i> <span data-en="LinkedIn" data-es="LinkedIn">LinkedIn</span></a>
+                            <a href="#" class="share-btn email"><i class="fas fa-envelope"></i> <span data-en="Email" data-es="Email">Email</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="post-sidebar">
+                    <!-- Table of Contents -->
+                    <div class="sidebar-widget toc-widget">
+                        <h3 data-en="Table of Contents" data-es="Tabla de Contenidos">Table of Contents</h3>
+                        <ul class="toc-list">
+                            <li><a href="#navigation-commands" data-en="Navigation Commands" data-es="Comandos de Navegación">Navigation Commands</a></li>
+                            <li><a href="#file-operations" data-en="File Operations" data-es="Operaciones de Archivos">File Operations</a></li>
+                            <li><a href="#file-content" data-en="File Content Commands" data-es="Comandos de Contenido">File Content Commands</a></li>
+                            <li><a href="#search-filter" data-en="Search and Filter" data-es="Búsqueda y Filtro">Search and Filter</a></li>
+                            <li><a href="#system-info" data-en="System Information" data-es="Información del Sistema">System Information</a></li>
+                            <li><a href="#network-commands" data-en="Network Commands" data-es="Comandos de Red">Network Commands</a></li>
+                            <li><a href="#advanced-tips" data-es="Consejos Avanzados" data-en="Advanced Tips">Advanced Tips</a></li>
+                        </ul>
+                    </div>
+
+                    
+
+                    
+                </aside>
+            </div>
+        </div>
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-en="&copy; 2025 My Blog. All rights reserved." data-es="&copy; 2025 Mi Blog. Todos los derechos reservados.">&copy; 2025 My Blog. All rights reserved.</p>
+                <p data-en="Made with ❤️ for sharing ideas across diverse topics" data-es="Hecho con ❤️ para compartir ideas en diversos temas">Made with ❤️ for sharing ideas across diverse topics</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
