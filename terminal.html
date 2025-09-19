@@ -437,22 +437,22 @@ $ grep -c "error" logfile.txt</code></pre>
 
                         <h3 data-en="13. find - Search for Files and Directories" data-es="13. find - Buscar Archivos y Directorios">13. find - Search for Files and Directories</h3>
                         <div class="code-block">
-                            <pre><code># Find files by name
+                            <pre><code># Find files by name / Encontrar archivo por nombre
 $ find . -name "*.js"
 
-# Find directories only
+# Find directories only / Encontrar solo directorios
 $ find . -type d -name "node_modules"
 
-# Find files by size
+# Find files by size / Encontrar archivos por tamaño
 $ find . -size +100M
 
-# Find files modified in last 7 days
+# Find files modified in last 7 days / Encontrar archivos modificados en los últimos 7 días
 $ find . -mtime -7
 
-# Find and execute command on results
+# Find and execute command on results / Encontrar y ejecutar comando en los resultados
 $ find . -name "*.log" -delete
 
-# Find files with specific permissions
+# Find files with specific permissions / Encontrar archivos con permisos específicos
 $ find . -perm 644</code></pre>
                         </div>
 
@@ -460,82 +460,79 @@ $ find . -perm 644</code></pre>
 
                         <h3 data-en="14. ps - Process Status" data-es="14. ps - Estado de Procesos">14. ps - Process Status</h3>
                         <div class="code-block">
-                            <pre><code># Show running processes for current user
+                            <pre><code># Show running processes for current user / mostrar procesos en ejecución para el usuario actual
 $ ps
 
-# Show all processes with detailed info
+# Show all processes with detailed info / mostrar todos los procesos con información detallada
 $ ps aux
 
-# Show processes in tree format
+# Show processes in tree format / mostrar procesos en formato de árbol
 $ ps -ef --forest
 
-# Find specific process
+# Find specific process / encontrar proceso específico
 $ ps aux | grep "nginx"</code></pre>
                         </div>
 
                         <h3 data-en="15. top/htop - System Activity Monitor" data-es="15. top/htop - Monitor de Actividad del Sistema">15. top/htop - System Activity Monitor</h3>
                         <div class="code-block">
-                            <pre><code># Show real-time system statistics
+                            <pre><code># Show real-time system statistics / mostrar estadísticas del sistema en tiempo real
 $ top
 
-# Enhanced version (if installed)
+# Enhanced version (if installed) / versión mejorada (si está instalada)
 $ htop
 
-# Sort by memory usage in top
+# Sort by memory usage in top / ordenar por uso de memoria en top
 # Press Shift+M while top is running
 
-# Sort by CPU usage in top
+# Sort by CPU usage in top / ordenar por uso de CPU en top
 # Press Shift+P while top is running</code></pre>
                         </div>
 
                         <h3 data-en="16. df/du - Disk Space Usage" data-es="16. df/du - Uso de Espacio en Disco">16. df/du - Disk Space Usage</h3>
                         <div class="code-block">
-                            <pre><code># Show filesystem disk space usage
+                            <pre><code># Show filesystem disk space usage / mostrar uso del espacio en disco del sistema de archivos
 $ df -h
 
-# Show directory size
+# Show directory size / mostrar tamaño del directorio
 $ du -h directory/
 
-# Show size of current directory
+# Show size of current directory / mostrar tamaño del directorio actual
 $ du -sh .
 
-# Show sizes of all files and directories
+# Show sizes of all files and directories / mostrar tamaños de todos los archivos y directorios
 $ du -ah</code></pre>
                         </div>
 
-                        <blockquote>
-                            <p data-en="The terminal is not just a tool, it's a superpower. Once you understand these fundamental commands, you'll find yourself accomplishing tasks in seconds that would take minutes with a graphical interface." data-es="La terminal no es solo una herramienta, es un superpoder. Una vez que entiendas estos comandos fundamentales, te encontrarás realizando tareas en segundos que tomarían minutos con una interfaz gráfica.">"The terminal is not just a tool, it's a superpower. Once you understand these fundamental commands, you'll find yourself accomplishing tasks in seconds that would take minutes with a graphical interface."</p>
-                        </blockquote>
-
+                    
                         <h2 id="network-commands" data-en="Network and Connectivity Commands" data-es="Comandos de Red y Conectividad">Network and Connectivity Commands</h2>
 
                         <h3 data-en="17. wget/curl - Download Files" data-es="17. wget/curl - Descargar Archivos">17. wget/curl - Download Files</h3>
                         <div class="code-block">
-                            <pre><code># Download file with wget
+                            <pre><code># Download file with wget / descargar archivo con wget
 $ wget https://example.com/file.zip
 
-# Download with curl
+# Download with curl / descargar con curl
 $ curl -O https://example.com/file.zip
 
-# Download and save with different name
+# Download and save with different name / descargar y guardar con nombre diferente
 $ curl https://example.com/data.json -o my-data.json
 
-# Make HTTP request and see response
+# Make HTTP request and see response / hacer solicitud HTTP y ver respuesta
 $ curl -v https://api.example.com/users</code></pre>
                         </div>
 
                         <h3 data-en="18. ssh - Secure Shell" data-es="18. ssh - Shell Seguro">18. ssh - Secure Shell</h3>
                         <div class="code-block">
-                            <pre><code># Connect to remote server
+                            <pre><code># Connect to remote server / conectar a servidor remoto
 $ ssh user@hostname
 
-# Connect on specific port
+# Connect on specific port / conectar en puerto específico
 $ ssh -p 2222 user@hostname
 
-# Copy files to remote server
+# Copy files to remote server / copiar archivos a servidor remoto
 $ scp file.txt user@hostname:/path/to/destination/
 
-# Copy files from remote server
+# Copy files from remote server / copiar archivos desde servidor remoto
 $ scp user@hostname:/path/to/file.txt ./local-directory/</code></pre>
                         </div>
 
@@ -547,37 +544,40 @@ $ scp user@hostname:/path/to/file.txt ./local-directory/</code></pre>
                         </p>
 
                         <div class="code-block">
-                            <pre><code># Count lines in a file
+                            <pre><code># Count lines in a file / contar líneas en un archivo
 $ cat file.txt | wc -l
 
-# Find and count specific pattern
+# Find and count specific pattern / encontrar y contar patrón específico
 $ grep "error" logfile.txt | wc -l
 
-# Show only unique lines
+# Show only unique lines / mostrar solo líneas únicas
 $ sort file.txt | uniq
 
-# Find largest files in directory
+# Find largest files in directory / encontrar archivos más grandes en el directorio
 $ ls -la | sort -k5 -nr | head -10
+# or / o
+$ls -lS | head -n 10  
 
-# Monitor real-time log for specific pattern
+
+# Monitor real-time log for specific pattern / monitorear log en tiempo real para patrón específico
 $ tail -f access.log | grep "404"</code></pre>
                         </div>
 
                         <h3 data-en="Command History and Shortcuts" data-es="Historial de Comandos y Atajos">Command History and Shortcuts</h3>
                         <div class="code-block">
-                            <pre><code># Show command history
+                            <pre><code># Show command history / mostrar historial de comandos
 $ history
 
-# Re-run last command
+# Re-run last command / volver a ejecutar el último comando
 $ !!
 
-# Re-run specific command from history
+# Re-run specific command from history / volver a ejecutar comando específico del historial
 $ !123
 
-# Search command history
+# Search command history / buscar en el historial de comandos
 $ history | grep "git"
 
-# Clear command history
+# Clear command history / limpiar historial de comandos
 $ history -c</code></pre>
                         </div>
 
@@ -604,14 +604,7 @@ $ history -c</code></pre>
                             </ul>
                         </div>
 
-                        <h2 data-en="Conclusion: Building Your Command Line Confidence" data-es="Conclusión: Construyendo tu Confianza en Línea de Comandos">Conclusion: Building Your Command Line Confidence</h2>
-                        <p data-en="Mastering these essential terminal commands is a journey, not a destination. Start with the basics like pwd, ls, and cd, then gradually incorporate more advanced commands into your workflow. The key is consistent practice and not being afraid to experiment in safe environments." data-es="Dominar estos comandos esenciales de terminal es un viaje, no un destino. Comienza con los básicos como pwd, ls, y cd, luego incorpora gradualmente comandos más avanzados en tu flujo de trabajo. La clave es la práctica consistente y no tener miedo de experimentar en entornos seguros.">
-                            Mastering these essential terminal commands is a journey, not a destination. Start with the basics like <code>pwd</code>, <code>ls</code>, and <code>cd</code>, then gradually incorporate more advanced commands into your workflow. The key is consistent practice and not being afraid to experiment in safe environments.
-                        </p>
-
-                        <p data-en="Remember that every expert was once a beginner. The terminal might seem intimidating at first, but with these fundamental commands in your toolkit, you're well on your way to becoming a command line power user. Keep practicing, stay curious, and don't hesitate to explore the man pages (man command-name) for detailed documentation on any command." data-es="Recuerda que cada experto fue una vez principiante. La terminal puede parecer intimidante al principio, pero con estos comandos fundamentales en tu kit de herramientas, estás bien encaminado para convertirte en un usuario avanzado de línea de comandos. Sigue practicando, mantente curioso, y no dudes en explorar las páginas man (man nombre-comando) para documentación detallada de cualquier comando.">
-                            Remember that every expert was once a beginner. The terminal might seem intimidating at first, but with these fundamental commands in your toolkit, you're well on your way to becoming a command line power user. Keep practicing, stay curious, and don't hesitate to explore the man pages (<code>man command-name</code>) for detailed documentation on any command.
-                        </p>
+                        
                     </div>
 
                     <!-- Post Tags -->
