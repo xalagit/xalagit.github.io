@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Technology & Innovation Blog" data-es="Blog de Tecnología e Innovación">Technology & Innovation Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 data-en="My Blog" data-es="Mi Blog">My Blog</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="index.html#about" class="nav-link" data-en="About" data-es="Acerca de">About</a>
+                <a href="index.html#topics" class="nav-link" data-en="Topics" data-es="Temas">Topics</a>
+                <a href="index.html#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-switcher">
+                    <button id="lang-btn" class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="switchLanguage('en')" class="lang-option">
+                            <span class="flag">🇺🇸</span> English
+                        </button>
+                        <button onclick="switchLanguage('es')" class="lang-option">
+                            <span class="flag">🇪🇸</span> Español
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+                <span>/</span>
+                <span data-en="Technology & Innovation" data-es="Tecnología e Innovación">Technology & Innovation</span>
+            </div>
+            <h1 data-en="The Terminal" data-es="La Terminal">The Terminal</h1>
+            <p data-en="I find using the terminal fun, and one of the joys of using Linux. It often makes things easier. This post is a few notes on useful commands that I'm sharing in case you find them useful, like they were for me." data-es="Encuentro divertido usar la terminal, y una de las alegrías de usar Linux. A menudo hace las cosas más fáciles. Esta publicación son algunas notas sobre comandos útiles que estoy compartiendo en caso de que los encuentres útiles, como lo fueron para mí.">I find using the terminal fun, and one of the joys of using Linux. It often makes things easier. This post is a few notes on useful commands that I'm sharing in case you find them useful, like they were for me.</p>
+
+           
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Content -->
+                <main class="blog-main">
+                    
+                    <!-- Regular Posts -->
+                    <div class="posts-grid">
+                                           
+
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=400&h=250&fit=crop" alt="Terminal Commands">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date" data-en="September 17, 2025" data-es="17 de Septiembre, 2025">September 17, 2025</span>
+                                    <span class="read-time" data-en="12 min read" data-es="12 min lectura">12 min read</span>
+                                </div>
+                                <h3 data-en="Essential Terminal Commands" data-es="Comandos de Terminal Esenciales ">Essential Terminal Commands </h3>
+                                
+                                <a href="Terminal/terminal.html" class="read-more" data-en="Read More" data-es="Leer Más">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    
+                </main>
+
+                
+                   
+                   
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-en="&copy; 2024 My Blog. All rights reserved." data-es="&copy; 2024 Mi Blog. Todos los derechos reservados.">&copy; 2024 My Blog. All rights reserved.</p>
+                <p data-en="The Terminal Blog" data-es="La Terminal">The Terminal</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
